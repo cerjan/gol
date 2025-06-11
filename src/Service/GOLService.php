@@ -21,7 +21,7 @@ final class GOLService
         private int $time = 0,
     )
     {
-        $this->life = $this->serializer->deserialize(file_get_contents(__DIR__ . '/../data.xml'), Life::class, 'xml');
+        $this->life = $this->serializer->deserialize(file_get_contents(__DIR__ . '/../../var/tmp/data.xml'), Life::class, 'xml');
 
         for ($y = 0; $y <= $this->life->world->cells ; $y++) {
             for ($x = 0; $x <= $this->life->world->cells ; $x++) {
