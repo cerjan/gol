@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<life>
+    <world>
+        <cells>10</cells>
+        <species>200</species>
+        <iterations>10</iterations>
+        <organisms>
+            <organism>a
+                <x_pos>13</x_pos>
+                <y_pos>18</y_pos>
+                <species>h</species>
+            </organism>
+            <organism>
+                <x_pos>7</x_pos>
+                <y_pos>19</y_pos>
+                <species>x</species>
+            </organism>
+        </organisms>
+    </world>
+</life>

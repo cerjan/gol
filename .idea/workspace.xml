@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="664f5801-d686-4993-83e3-d486abe3df92" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/src/Service/FileReader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/LifeSerializer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Service/FileReaderTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Service/LifeSerializerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Service/fixture-invalid.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Service/fixture-valid.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Command/Input/InputValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/Input/InputValidator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Command/RunCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/RunCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Life.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Life.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Neighbor.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Neighbor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Organism.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Organism.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/World.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/World.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/GOLService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/GOLService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/GOLService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/GameOfLife.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Command/Input/InputValidatorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Command/Input/InputValidatorTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +116,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary": "PHPUnit",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "S:/Repos/_workshop/tests/Command/Input",
+    "last_opened_file_path": "S:/Repos/_workshop/tests/Service",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -126,6 +128,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="S:\Repos\_workshop\tests\Service" />
       <recent name="S:\Repos\_workshop\tests\Command\Input" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -167,7 +170,7 @@
       <workItem from="1749634599949" duration="2208000" />
       <workItem from="1749636853636" duration="6000" />
       <workItem from="1749636863029" duration="12105000" />
-      <workItem from="1749652779296" duration="7021000" />
+      <workItem from="1749652779296" duration="13557000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -209,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749657301197</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="init">
+      <option name="closed" value="true" />
+      <created>1749662277816</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1749662277816</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

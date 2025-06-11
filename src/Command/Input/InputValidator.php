@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Command\Input;
 
+use InvalidArgumentException;
 use Symfony\Component\Console\Input\InputInterface;
 
 class InputValidator
@@ -19,11 +20,11 @@ class InputValidator
         $file = $input->getArgument('inputFile');
 
         if ($file === '') {
-            throw new \InvalidArgumentException('File name is empty');
+            throw new InvalidArgumentException('File name is empty');
         }
 
         if (!file_exists($this->tmpDir . '/' . $file)) {
-            throw new \InvalidArgumentException("File `{$file}` does not exist");
+            throw new InvalidArgumentException("File `{$file}` does not exist");
         }
 
         return $this->tmpDir . '/' . $file;

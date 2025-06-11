@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Tests\Command\Input;
 
 use App\Command\Input\InputValidator;
+use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Input\InputArgument;
@@ -32,7 +33,7 @@ class InputValidatorTest extends TestCase
 
     public function testValidateInputFileNotExists(): void
     {
-        $this->expectException(\InvalidArgumentException::class);
+        $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage("File `fixture-not-exists.xml` does not exist");
 
         $this->inputValidator->validateInputFile(self::getArrayInput('fixture-not-exists.xml'));
@@ -40,7 +41,7 @@ class InputValidatorTest extends TestCase
 
     public function testValidateInputBlank(): void
     {
-        $this->expectException(\InvalidArgumentException::class);
+        $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage("File name is empty");
 
         $this->inputValidator->validateInputFile(self::getArrayInput(''));

@@ -9,7 +9,7 @@ use App\Model\Neighbor;
 use App\Model\Organism;
 use Symfony\Component\Serializer\SerializerInterface;
 
-final class GOLService
+final class GameOfLife
 {
     /** @var array<int, array<int, Organism>> */
     private array $organisms = [];
@@ -21,16 +21,18 @@ final class GOLService
     {
 //        $this->life = $this->serializer->deserialize(file_get_contents(__DIR__ . '/../../var/tmp/data.xml'), Life::class, 'xml');
 //
-//        for ($y = 0; $y <= $this->life->world->cells ; $y++) {
-//            for ($x = 0; $x <= $this->life->world->cells ; $x++) {
-//                $this->organisms[$x] ??= [];
-//                $this->organisms[$x][$y] ??= null;
-//            }
-//        }
+        for ($y = 0; $y <= $this->life->getWorld()->getCells() ; $y++) {
+            for ($x = 0; $x <= $this->life->getWorld()->getCells() ; $x++) {
+                $this->organisms[$y] ??= [];
+                $this->organisms[$y][$x] = '-';
+            }
+        }
+
+        echo implode('', array_map(fn($o) => 'a', $organism));
 //
-//        foreach ($this->life->world->organisms as $organism) {
-//            $this->saveToXY($organism->xPos, $organism->yPos, $organism);
-//        }
+        foreach ($this->life->getWorld()->getOrganisms() as $organism) {
+            $this->saveToXY($organism->getXPos(), $organism->getYPos(), $organism);
+        }
     }
 
     /**
@@ -39,9 +41,9 @@ final class GOLService
     public function iterate(): ?array
     {
         if ($this->iterations++ <= $this->life->getWorld()->getIterations()) {
-            $newOrganism = $this->life->getWorld()->getOrganisms();
+            $newOrganism = $this->organisms;
 
-            foreach ($this->life->getWorld()->getOrganisms() as $y => $row) {
+            foreach ($this->organisms as $y => $row) {
                 foreach ($row as $x => $organism) {
                     $newOrganism[$x][$y] = $organism;
                 }
@@ -106,11 +108,10 @@ final class GOLService
 //        return $neighbors;
 //    }
 //
-//    private function saveToXY(int $x, int $y, Organism $organism): void
-//    {
-//        $this->organisms[$x] ??= [];
-//        $this->organisms[$x][$y] ??= $organism;
-//    }
+    private function saveToXY(int $x, int $y, Organism $organism): void
+    {
+        $this->organisms[$x][$y] = $organism;
+    }
 //
 //    private static function getStringKey(Organism $organism): string
 //    {
