@@ -1,0 +1,45 @@
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - '80:80'
+    volumes:
+      - .:/app
+      - ./.docker/nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - php
+      - mysql
+  php:
+    build: ./.docker/php
+    working_dir: /app
+    volumes:
+      - .:/app
+      - ./.docker/php/opcache.ini:/usr/local/etc/php/conf.d/opcache.ini
+    depends_on:
+      - mysql
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  mysql:
+    image: mysql:8
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: project
+    volumes:
+      - ./.docker/mysql/conf:/etc/mysql/conf.d
+      - mysqldata:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+      - '8080:80'
+    environment:
+      PMA_HOST: mysql
+      UPLOAD_LIMIT: 10G
+      MAX_EXECUTION_TIME: 7200
+    depends_on:
+      - mysql
+      - php
+
+volumes:
+  mysqldata:
