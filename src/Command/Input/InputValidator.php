@@ -14,7 +14,7 @@ class InputValidator
     {
     }
 
-    public function validate(InputInterface $input): string
+    public function validateInputFile(InputInterface $input): string
     {
         $file = $input->getArgument('inputFile');
 

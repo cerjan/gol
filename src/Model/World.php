@@ -6,20 +6,37 @@ namespace App\Model;
 
 use Symfony\Component\Serializer\Attribute\SerializedPath;
 
-readonly class World
+class World
 {
     /**
-     * @param int $cells
-     * @param int $species
-     * @param int $iterations
      * @param list<Organism> $organisms
      */
     public function __construct(
-        public int $cells,
-        public int $species,
-        public int $iterations,
+        private int $cells,
+        private int $species,
+        private int $iterations,
         #[SerializedPath('[organisms][organism]')]
-        public array $organisms,
+        private array $organisms,
     ) {
+    }
+
+    public function getCells(): int
+    {
+        return $this->cells;
+    }
+
+    public function getSpecies(): int
+    {
+        return $this->species;
+    }
+
+    public function getIterations(): int
+    {
+        return $this->iterations;
+    }
+
+    public function getOrganisms(): array
+    {
+        return $this->organisms;
     }
 }

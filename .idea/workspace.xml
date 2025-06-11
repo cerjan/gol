@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="664f5801-d686-4993-83e3-d486abe3df92" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/tests/Command/Input/InputValidatorTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Command/Input/fixture-exists.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Command/Input/InputValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/Input/InputValidator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Command/RunCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/RunCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Life.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Life.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Neighbor.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Neighbor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Organism.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Organism.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/World.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/World.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/GOLService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/GOLService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Command/Input/InputValidatorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Command/Input/InputValidatorTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +167,7 @@
       <workItem from="1749634599949" duration="2208000" />
       <workItem from="1749636853636" duration="6000" />
       <workItem from="1749636863029" duration="12105000" />
-      <workItem from="1749652779296" duration="4360000" />
+      <workItem from="1749652779296" duration="7021000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -197,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749654026957</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="init">
+      <option name="closed" value="true" />
+      <created>1749657301197</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1749657301197</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -4,11 +4,21 @@ declare(strict_types=1);
 
 namespace App\Model;
 
-readonly class Neighbor
+class Neighbor
 {
     public function __construct(
-        public int $xPos,
-        public int $yPos,
+        private int $xPos,
+        private int $yPos,
     ) {
+    }
+
+    public function getXPos(): int
+    {
+        return $this->xPos;
+    }
+
+    public function getYPos(): int
+    {
+        return $this->yPos;
     }
 }

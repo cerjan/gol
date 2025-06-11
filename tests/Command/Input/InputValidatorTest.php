@@ -23,27 +23,27 @@ class InputValidatorTest extends TestCase
         $this->inputValidator = new InputValidator(__DIR__);
     }
 
-    public function testValidate(): void
+    public function testValidateInputFile(): void
     {
-        $actual = $this->inputValidator->validate(self::getArrayInput('fixture-exists.xml'));
+        $actual = $this->inputValidator->validateInputFile(self::getArrayInput('fixture-exists.xml'));
 
         self::assertEquals(__DIR__ . '/fixture-exists.xml', $actual);
     }
 
-    public function testValidateNotExists(): void
+    public function testValidateInputFileNotExists(): void
     {
         $this->expectException(\InvalidArgumentException::class);
         $this->expectExceptionMessage("File `fixture-not-exists.xml` does not exist");
 
-        $this->inputValidator->validate(self::getArrayInput('fixture-not-exists.xml'));
+        $this->inputValidator->validateInputFile(self::getArrayInput('fixture-not-exists.xml'));
     }
 
-    public function testValidateBlank(): void
+    public function testValidateInputBlank(): void
     {
         $this->expectException(\InvalidArgumentException::class);
         $this->expectExceptionMessage("File name is empty");
 
-        $this->inputValidator->validate(self::getArrayInput(''));
+        $this->inputValidator->validateInputFile(self::getArrayInput(''));
     }
 
     private static function getArrayInput(string $file): InputInterface

@@ -4,12 +4,27 @@ declare(strict_types=1);
 
 namespace App\Model;
 
-readonly class Organism
+class Organism
 {
     public function __construct(
-        public int $xPos,
-        public int $yPos,
-        public string $species
+        private int $xPos,
+        private int $yPos,
+        private string $species
     ) {
+    }
+
+    public function getXPos(): int
+    {
+        return $this->xPos;
+    }
+
+    public function getYPos(): int
+    {
+        return $this->yPos;
+    }
+
+    public function getSpecies(): string
+    {
+        return $this->species;
     }
 }
