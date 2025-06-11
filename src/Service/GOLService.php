@@ -26,7 +26,7 @@ final class GOLService
         for ($y = 0; $y <= $this->life->world->cells ; $y++) {
             for ($x = 0; $x <= $this->life->world->cells ; $x++) {
                 $this->organisms[$x] ??= [];
-                $this->organisms[$x][$y] ??= [];
+                $this->organisms[$x][$y] ??= null;
             }
         }
 
