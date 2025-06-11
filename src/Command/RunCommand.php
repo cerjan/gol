@@ -16,8 +16,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 class RunCommand extends Command
 {
     public function __construct(
-        private GOLService $golService,
-        private InputValidator $inputValidator,
+        private GOLService              $golService,
+        private readonly InputValidator $inputValidator,
     )
     {
         parent::__construct();
@@ -30,9 +30,8 @@ class RunCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $inputFile = $this->inputValidator->validate($input->getArgument('inputFile'));
+        $inputFile = $this->inputValidator->validate($input);
 
-        $this->xmlValidator->validate($inputFile);
 
 
         return Command::SUCCESS;

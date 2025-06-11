@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="664f5801-d686-4993-83e3-d486abe3df92" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/Command/Input/InputValidator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Command/Input/InputValidatorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Command/Input/fixture-exists.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command/Input/InputValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/Input/InputValidator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Command/RunCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/RunCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/GOLService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/GOLService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +110,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary": "PHPUnit",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "S:/Repos/_workshop/tests/Command/Input",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -122,6 +121,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="S:\Repos\_workshop\tests\Command\Input" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="S:\Repos\_workshop\var\tmp" />
     </key>
@@ -161,7 +163,7 @@
       <workItem from="1749634599949" duration="2208000" />
       <workItem from="1749636853636" duration="6000" />
       <workItem from="1749636863029" duration="12105000" />
-      <workItem from="1749652779296" duration="885000" />
+      <workItem from="1749652779296" duration="4360000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -187,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749651347338</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="init">
+      <option name="closed" value="true" />
+      <created>1749654026957</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1749654026957</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

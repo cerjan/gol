@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Command\Input;
 
+use Symfony\Component\Console\Input\InputInterface;
+
 class InputValidator
 {
     public function __construct(
@@ -12,10 +14,12 @@ class InputValidator
     {
     }
 
-    public function validate(string $file): string
+    public function validate(InputInterface $input): string
     {
+        $file = $input->getArgument('inputFile');
+
         if ($file === '') {
-            throw new \InvalidArgumentException('File is empty');
+            throw new \InvalidArgumentException('File name is empty');
         }
 
         if (!file_exists($this->tmpDir . '/' . $file)) {
